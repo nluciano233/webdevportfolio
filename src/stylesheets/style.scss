@@ -41,14 +41,23 @@ html, body {
   background-color: $background;
   color: $text-white;
   font-family: 'Inter', sans-serif;
+  position: relative;
 }
 // font sizes for mobile
-html, body {
+html, body, button {
   font-size: 1em;
+}
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 
 .navigation-menu {
+  position: absolute;
+  width: 100%;
+  z-index: 20;
 
   .mobile-navigation-menu {
     position: relative;
@@ -176,6 +185,54 @@ html, body {
       display: block;
     }
   }
+}
 
+.section1 {
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
 
+  .planeWaveContainer {
+    #planeWave {
+      height: 100vh;
+      width: 100%;
+      overflow: hidden;
+      overflow-y: hidden;
+      filter: grayscale(90%);
+    }
+  }
+  // by doing this you're overlapping the content container to the threejs canvas
+  .content {
+    position: relative;
+    top: -100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    .photo-container {
+      .photo-placeholder {
+        height: 200px;
+        width: 200px;
+        border-radius: 100px;
+        background: grey;
+      }
+    }
+    .description {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+    }
+    .contact-button-container {
+      .contact-button {
+        border: 1px solid #fff;
+        color: #fff;
+        background: #00000000;
+        padding: 15px 50px;
+      }
+    }
+  }
 }
