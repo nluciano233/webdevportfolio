@@ -3,6 +3,14 @@
 //import fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+// media queries
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
 // removes blue highlight when you click elements from phone
 .noSelect {
   -webkit-tap-highlight-color: transparent;
@@ -25,6 +33,10 @@ $text-white: #fff;
 $text-gray: #747474;
 $white: #fff;
 
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   background-color: $background;
   color: $text-white;
@@ -35,9 +47,6 @@ html, body {
   font-size: 1em;
 }
 
-* {
-  box-sizing: border-box;
-}
 
 .navigation-menu {
 
@@ -116,7 +125,7 @@ html, body {
               border-bottom: 1px solid #fff;
             }
             a {
-              color: white;
+              color: #fff;
               text-decoration: none!important;
               text-align: center;
             }
@@ -125,4 +134,48 @@ html, body {
       }
     }
   }
+
+  .desktop-navigation-menu {
+    
+    .header {
+      height: 200px;
+      background: linear-gradient(rgb(0, 0, 0), rgba(0, 0, 0, 0));
+
+      nav {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 30px;
+          gap: 200px;
+          font-size: 1.4em;
+
+          li {
+            list-style: none;
+            text-align: center;
+            a {
+              color: #fff;
+              text-decoration: none;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // media queries
+  .desktop-navigation-menu {
+    display: none;
+  }
+  @media (min-width: $xl) {
+    .mobile-navigation-menu {
+      display: none;
+    }
+    .desktop-navigation-menu {
+      display: block;
+    }
+  }
+
+
 }

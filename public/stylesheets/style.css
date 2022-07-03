@@ -58,6 +58,9 @@ table {
 .noSelect:focus {
   outline: none !important; }
 
+* {
+  box-sizing: border-box; }
+
 html, body {
   background-color: #1D1D1D;
   color: #fff;
@@ -65,9 +68,6 @@ html, body {
 
 html, body {
   font-size: 1em; }
-
-* {
-  box-sizing: border-box; }
 
 .navigation-menu .mobile-navigation-menu {
   position: relative; }
@@ -122,6 +122,33 @@ html, body {
       .navigation-menu .mobile-navigation-menu .header nav ul li:not(:last-child) {
         border-bottom: 1px solid #fff; }
       .navigation-menu .mobile-navigation-menu .header nav ul li a {
-        color: white;
+        color: #fff;
         text-decoration: none !important;
         text-align: center; }
+
+.navigation-menu .desktop-navigation-menu .header {
+  height: 200px;
+  background: linear-gradient(black, rgba(0, 0, 0, 0)); }
+  .navigation-menu .desktop-navigation-menu .header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 200px;
+    font-size: 1.4em; }
+    .navigation-menu .desktop-navigation-menu .header nav ul li {
+      list-style: none;
+      text-align: center; }
+      .navigation-menu .desktop-navigation-menu .header nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        text-align: center; }
+
+.navigation-menu .desktop-navigation-menu {
+  display: none; }
+
+@media (min-width: 1200px) {
+  .navigation-menu .mobile-navigation-menu {
+    display: none; }
+  .navigation-menu .desktop-navigation-menu {
+    display: block; } }
