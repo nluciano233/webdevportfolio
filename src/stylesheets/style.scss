@@ -261,7 +261,9 @@ a:visited {
 .section2 {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
   padding: 200px 20px;
 
   .description {
@@ -293,5 +295,59 @@ a:visited {
     @media (min-width: $xl) {
       flex-direction: row;
     }
+  }
+}
+
+.section3 {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px;
+    justify-content: center;
+    align-items: center;
+
+    .flex1 {
+      z-index: 2;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        .technologies {
+          display: flex;
+          font-size: 1.2em;
+
+          ul {
+            list-style: inside;
+          }
+        }
+      }
+    }
+    .flex2 {
+      overflow: hidden;
+      max-width: 100vw;
+      #myCanvas {
+        // width: 400px;
+        // height: 400px;
+        width: 100vw;
+        height: 100vh;
+        max-height: 100vw; // this is not an error. I want the height in vw so the canvas stays a square at all screen sizes.
+
+        @media (min-width: $md) {
+          height: 700px;
+          width: 700px;
+        }
+      }
+    }
+
+    @media (min-width: $xl) {
+      flex-direction: row;
+    }
+
   }
 }

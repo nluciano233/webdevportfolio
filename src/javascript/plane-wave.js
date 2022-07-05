@@ -1,3 +1,7 @@
+// javascript files were conflicting with each other so I wrapped everything inside a function to be used as "namespace"
+
+function wave() {
+
 
 var container = document.getElementById('planeWave')
 
@@ -72,3 +76,7 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
 }
+
+}
+
+wave();
