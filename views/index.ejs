@@ -330,7 +330,68 @@
       </div>
     </section>
 
+    <section class="section4">
+      <div class="description">
+        <h2>Contact me</h2>
+        <p>I'm interested in freelance opportunities. However, if you have other request or question, go ahead and use the form.</p>
+      </div>
+      <div class="form-container">
+        <form action="/form-send" method="post" enctype="multipart/form-data" id="contact-form">
+          <div class="row">
+            <div class="col">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="stuff" required>
+            </div>
+            <div class="col">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="row">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="row">
+            <label for="message">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+          </div>
+          <div class="row submit">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/88/three.min.js"></script>
+    <script type="text/javascript">
+      class ScrollPoster {
+          constructor(url) {
+              this.url = url;
+              this.isScrolling = null;
+              this.init();
+          }
+
+          post(location, position) {
+              console.log('Posting: ', { href: location.href, pos: position });
+          }
+
+          init() {
+              var self = this;
+              window.addEventListener('scroll', function(e) {
+                  window.clearTimeout(this.isScrolling);
+                  this.isScrolling = setTimeout(function() {
+                      const pos = window.scrollY;
+                      self.post(window.location, pos);
+                  }, 333);
+              }, false);
+          }
+      };
+
+      window.onload = () => {
+          const handler = new ScrollPoster('http://example.com');
+      };
+  </script>
     <script src="javascripts/sphere.js"></script>
     <script src="javascripts/plane-wave.js"></script>
   </body>

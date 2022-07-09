@@ -4,6 +4,11 @@ This website was made to be used as my portfolio. Some of the design elements us
 
 
 # Documentation
+## nodemon 
+To start the server on another port configure the script in package.json like this
+```
+"devstart": "PORT=3001 nodemon ./bin/www"
+```
 
 ## Installing and configuring sass
 
