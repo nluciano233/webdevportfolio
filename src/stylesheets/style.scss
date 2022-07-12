@@ -402,6 +402,9 @@ p {
         input {
           height: 30px;
         }
+        textarea {
+          resize: vertical;
+        }
         input, textarea {
           width: 100%;
           background: #2B2B2B;

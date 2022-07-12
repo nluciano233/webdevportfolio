@@ -313,6 +313,8 @@ p {
       color: rgba(0, 0, 0, 0); }
     .section4 .form-container #contact-form .row input, .section4 .form-container .row .row input {
       height: 30px; }
+    .section4 .form-container #contact-form .row textarea, .section4 .form-container .row .row textarea {
+      resize: vertical; }
     .section4 .form-container #contact-form .row input, .section4 .form-container #contact-form .row textarea, .section4 .form-container .row .row input, .section4 .form-container .row .row textarea {
       width: 100%;
       background: #2B2B2B;
