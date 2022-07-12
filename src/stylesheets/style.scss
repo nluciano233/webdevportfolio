@@ -234,18 +234,19 @@ a:visited {
     padding: 0 20px;
 
     .photo-container {
-      .photo-placeholder {
+      .profile-picture {
         height: 200px;
         width: 200px;
         border-radius: 100px;
-        background: grey;
+        -webkit-box-shadow: 0px 0px 46px 20px rgba(0, 0, 0, 0.589); 
+        box-shadow: 0px 0px 46px 20px rgba(0, 0, 0, 0.589);
       }
     }
     .description {
       display: flex;
       flex-direction: column;
       text-align: center;
-      gap: 15px;
+      gap: 10px;
 
     }
     .contact-button-container {
@@ -253,7 +254,7 @@ a:visited {
         border: 1px solid #fff;
         color: #fff;
         background: $transparent;
-        padding: 15px 50px;
+        padding: 10px 50px;
       }
     }
 
@@ -440,4 +441,45 @@ a:visited {
       }
     }
   }
+}
+
+footer {
+  background: $background-dark;
+  color: $text-gray;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 20px;
+  gap: 30px;
+
+  @media (min-width: $sm) {
+    flex-direction: row;
+    gap: 20vw;
+  }
+  
+  .section, .group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .group {
+      gap: 5px;
+    }
+
+    ul {
+      list-style: none;
+    }
+    a {
+      text-decoration: none;
+      color: $text-gray;
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  background: $background-darker;
+  color: $text-gray;
+  padding: 5px 0;
 }
