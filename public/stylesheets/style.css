@@ -65,8 +65,7 @@ html, body {
   background-color: #1D1D1D;
   color: #fff;
   font-family: 'Inter', sans-serif;
-  position: relative;
-  line-height: 1.2em; }
+  position: relative; }
 
 html, body, button {
   font-size: 1em; }
@@ -85,11 +84,17 @@ h2 {
   font-weight: bold;
   text-align: center; }
 
+h3 {
+  font-size: 1.2em; }
+
 a {
   color: #fff; }
 
 a:visited {
   color: #747474; }
+
+p {
+  line-height: 1.2em; }
 
 .navigation-menu {
   position: absolute;
@@ -198,21 +203,22 @@ a:visited {
     justify-content: center;
     gap: 40px;
     padding: 0 20px; }
-    .section1 .content .photo-container .photo-placeholder {
+    .section1 .content .photo-container .profile-picture {
       height: 200px;
       width: 200px;
       border-radius: 100px;
-      background: grey; }
+      -webkit-box-shadow: 0px 0px 46px 20px rgba(0, 0, 0, 0.589);
+      box-shadow: 0px 0px 46px 20px rgba(0, 0, 0, 0.589); }
     .section1 .content .description {
       display: flex;
       flex-direction: column;
       text-align: center;
-      gap: 15px; }
+      gap: 10px; }
     .section1 .content .contact-button-container .contact-button {
       border: 1px solid #fff;
       color: #fff;
       background: #00000000;
-      padding: 15px 50px; }
+      padding: 10px 50px; }
     @media (max-height: 400px) {
       .section1 .content .photo-container {
         display: none; } }
@@ -334,3 +340,34 @@ a:visited {
           flex-direction: row; }
           .section4 .form-container #contact-form .row .col, .section4 .form-container .row .row .col {
             width: 100%; } }
+
+footer {
+  background: #181818;
+  color: #747474;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 20px;
+  gap: 30px; }
+  @media (min-width: 576px) {
+    footer {
+      flex-direction: row;
+      gap: 20vw; } }
+  footer .section, footer .group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+    footer .section .group, footer .group .group {
+      gap: 5px; }
+    footer .section ul, footer .group ul {
+      list-style: none; }
+    footer .section a, footer .group a {
+      text-decoration: none;
+      color: #747474; }
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  background: #0F0F0F;
+  color: #747474;
+  padding: 5px 0; }

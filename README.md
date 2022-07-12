@@ -57,11 +57,32 @@ To start, create inside /src/javascript a file named `terser.js`.
 Add inside of it all the config files, go and see the file.
 
 After that go into package.json and add the script so we can easily run the file whenever we need.
-```
+```json
 "runterser": "node ./src/javascript/terser.js"
 ```
 
 The uglified code will be saved inside public/javascripts.
+
+## How to setup the mailer with nodemailer
+
+First install multiparty and nodemailer. Create an outlook account and from settings allow smtp, then copy provided smtp info into your nodemailer transporter. At the time of writing they look like this:
+```javascript
+const transporter = nodemailer.createTransport({
+  host: "smtp.office365.com",
+  port: 587,
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
+  },
+});
+```
+
+To test your mailer use MailTrap, it will give you useful information about mail integrity.
+
+In my case the problem was with my `from` header, it was not configured properly and my mails were not delivering. I couldn't figure out the problem until I used Mailtrap.
+
+The `from` header should be configured to the same email that will send the emails, which in this project is stored inside `process.env.EMAIL`. 
+
 
 # The design
 

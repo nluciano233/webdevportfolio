@@ -44,7 +44,6 @@ html, body {
   color: $text-white;
   font-family: 'Inter', sans-serif;
   position: relative;
-  line-height: 1.2em;
 }
 // font sizes for mobile
 html, body, button {
@@ -64,13 +63,18 @@ h2 {
   font-weight: bold;
   text-align: center;
 }
+h3 {
+  font-size: 1.2em;
+}
 a {
   color: $text-white;
 }
 a:visited {
   color: $text-gray;
 }
-
+p {
+  line-height: 1.2em;
+}
 
 .navigation-menu {
   position: absolute;

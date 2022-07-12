@@ -6,15 +6,19 @@
     "start": "node ./bin/www",
     "devstart": "nodemon ./bin/www",
     "scss": "node-sass --watch src/stylesheets/style.scss public/stylesheets/style.css",
-    "runterser": "node ./src/javascript/terser.js"
+    "terser": "node ./src/javascript/terser.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
+    "express-validator": "^6.14.2",
     "http-errors": "~1.6.3",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "multiparty": "^4.2.3",
+    "nodemailer": "^6.7.7"
   },
   "devDependencies": {
     "node-sass": "^7.0.1",
