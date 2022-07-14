@@ -3,7 +3,7 @@
 const fs = require("fs");
 const { minify } = require("terser");
 
-const files = ["plane-wave.js", "sphere.js"]; // put inside here all the files that you want to uglify
+const files = ["plane-wave.js", "sphere.js", "form.js"]; // put inside here all the files that you want to uglify
 
 // read all the content from the files and return them into an array
 function readFiles (files) {
@@ -12,6 +12,7 @@ function readFiles (files) {
     data.push(fs.readFileSync(require('path').resolve(__dirname, e)).toString());
   })
 
+  data = data.join(';')
   return data;
 }
 
@@ -19,18 +20,29 @@ function readFiles (files) {
 async function uglify(files) {
   const filesData = await readFiles(files);
   
-  filesData.forEach( async (e, i) => {
+  // filesData.forEach( async (e, i) => {
 
-    var code = {};
-    code[files[i]] = `${e}`
+  //   var code = {};
+  //   code[files[i]] = `${e}`
 
-    var result = await minify(code);
+  //   var result = await minify(code);
 
-    fs.writeFile(`${__dirname}/../../public/javascripts/${files[i]}`, result.code, function(err) {
-      if (err) {
-        console.log(err);
-      }
-    });
+  //   fs.writeFile(`${__dirname}/../../public/javascripts/${files[i]}`, result.code, function(err) {
+  //     if (err) {
+  //       console.log(err);
+  //     }
+  //   });
+  // });
+  var code = {
+    "main.js": `${filesData}`
+  };
+
+  var result = await minify(code);
+
+  fs.writeFile(`${__dirname}/../../public/javascripts/main.js`, result.code, function(err) {
+    if (err) {
+      console.log(err);
+    }
   });
 
 };

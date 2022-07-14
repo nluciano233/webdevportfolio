@@ -218,7 +218,8 @@ p {
       border: 1px solid #fff;
       color: #fff;
       background: #00000000;
-      padding: 10px 50px; }
+      padding: 10px 50px;
+      cursor: pointer; }
     @media (max-height: 400px) {
       .section1 .content .photo-container {
         display: none; } }
@@ -334,7 +335,8 @@ p {
         background: #00000000;
         padding: 10px 0;
         width: 100%;
-        max-width: 400px; }
+        max-width: 400px;
+        cursor: pointer; }
     @media (min-width: 1200px) {
       .section4 .form-container #contact-form, .section4 .form-container .row {
         max-width: 700px; }
