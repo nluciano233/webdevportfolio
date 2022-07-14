@@ -344,6 +344,15 @@ p {
           flex-direction: row; }
           .section4 .form-container #contact-form .row .col, .section4 .form-container .row .row .col {
             width: 100%; } }
+  .section4 .form-container .res {
+    text-align: center;
+    padding: 20px 0; }
+  .section4 .form-container .hide {
+    display: none; }
+  .section4 .form-container .success {
+    color: green; }
+  .section4 .form-container .error {
+    color: red; }
 
 footer {
   background: #181818;

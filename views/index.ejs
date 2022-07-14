@@ -336,7 +336,7 @@
         <p>I'm interested in freelance opportunities. However, if you have other request or question, go ahead and use the form.</p>
       </div>
       <div class="form-container">
-        <form action="/send-form" method="post" enctype="multipart/form-data" id="contact-form">
+        <form id="contact-form">
           <div class="row">
             <div class="col">
               <label for="name">Name</label>
@@ -356,9 +356,12 @@
             <textarea name="message" id="message" placeholder="Message" cols="30" rows="10"></textarea>
           </div>
           <div class="row submit">
-            <button type="submit">Send</button>
+            <button id="contact-form-submit-button" type="submit">Send</button>
           </div>
         </form>
+        <p id="sending" class="res hide">Sending...</p>
+        <p id="form-success" class="res success hide">Email successfully sent.</p>
+        <p id="form-error" class="res error hide">There was an error sending your email. Please refresh the page and try again.</p>
       </div>
 
     </section>
@@ -396,7 +399,7 @@
           }
 
           post(location, position) {
-              console.log('Posting: ', { href: location.href, pos: position });
+              // console.log('Posting: ', { href: location.href, pos: position });
           }
 
           init() {

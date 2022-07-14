@@ -449,6 +449,20 @@ p {
 
       }
     }
+
+    .res {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .hide {
+      display: none;
+    }
+    .success {
+      color: rgb(0, 128, 0);
+    }
+    .error {
+      color: rgb(255, 0, 0);
+    }
   }
 }
 

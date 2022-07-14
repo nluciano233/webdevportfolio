@@ -23,7 +23,7 @@ let PATHS = [...svgs.children].map((svg,i)=>{
   return [...svg.children].map((e,j)=>{
     let c = e.getAttribute("fill");
     if(c !== null){
-      console.log(c);
+      // console.log(c);
       COLORS[i][j] = c;
     }else{
       COLORS[i][j] = COLORS[i][0] ? COLORS[i][0] : "#FFF";
@@ -92,7 +92,7 @@ canvas.addEventListener('mousemove', e=>{
 canvas.addEventListener("mouseout", function (event) {
     mouse_moving = false;
     let theta = -1 * Math.atan2(mouse_y - height/2, mouse_x - width/2) + Math.PI * 0.5;
-    console.log(theta);
+    // console.log(theta);
     let setSpeedZ = Math.cos(theta) * 0.1;
     let setSpeedY = Math.sin(theta) * 0.1;
     function slowDownSpin(){
