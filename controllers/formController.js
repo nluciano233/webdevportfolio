@@ -32,7 +32,7 @@ const send = (req, res, next) => {
 
     const mail = {
       from: process.env.EMAIL,
-      to: "y3retax0d@mozmail.com",
+      to: process.env.EMAIL_RECIPIENTS,
       subject: data.subject,
       text: `${data.name} <${data.email}> \n${data.message}`,
     };
