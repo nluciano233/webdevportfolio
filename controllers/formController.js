@@ -33,8 +33,9 @@ const send = (req, res, next) => {
     const mail = {
       from: process.env.EMAIL,
       to: process.env.EMAIL_RECIPIENTS,
-      subject: data.subject,
-      text: `${data.name} <${data.email}> \n${data.message}`,
+      subject: `PORTFOLIO CONTACT FORM ${data.subject}`,
+      text: `Subject: ${data.subject}.\nFrom: ${data.email}\nMessage: ${data.message}`,
+      html: `<h1>${data.subject}</h1>\n<h3>From: ${data.email}</h3>\n<p>${data.message}</p>`,
     };
     console.log(mail)
 
