@@ -19,6 +19,9 @@ const sendMail = (mail) => {
     if (response.ok === true) {
       formSuccess.classList.remove("hide");
       sending.classList.add('hide');
+
+      // reset form is message is successfully sent
+      form.reset();
     } else {
       formError.classList.remove("hide");
       sending.classList.add('hide');
