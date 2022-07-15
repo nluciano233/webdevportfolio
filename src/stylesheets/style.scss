@@ -75,6 +75,16 @@ a:visited {
 p {
   line-height: 1.2em;
 }
+// remove white borders when clicking input boxes
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  border-color: rgba(231, 231, 231, 0.8);
+  box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(231, 231, 231, 0.8);
+  outline: 0 none;
+}
+
 
 .navigation-menu {
   position: absolute;
@@ -397,6 +407,7 @@ p {
       .row {
         label { // makes the text not visible for normal users but it can be heard by screen readers
           position: absolute;
+          margin-left: -9999px;
           color:rgba(0, 0, 0, 0);
         }
         
@@ -477,7 +488,7 @@ footer {
 
   @media (min-width: $sm) {
     flex-direction: row;
-    gap: 20vw;
+    gap: 10vw;
   }
   
   .section, .group {
