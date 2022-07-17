@@ -102,6 +102,9 @@ $ git rm -r --cached public
 ```
 to remove it from git.
 
+## After deploying
+After theploying run `npm run build` to build the css and javascripts of the website. `build` is a script inside package.json.
+
 
 # The design
 

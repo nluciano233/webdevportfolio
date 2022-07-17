@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "devstart": "nodemon --ignore public --exec ./bin/www",
     "scss": "node-sass --watch src/stylesheets/style.scss public/stylesheets/style.css",
-    "terser": "node ./src/javascript/terser.js"
+    "terser": "node ./src/javascript/terser.js",
+    "build": "node-sass src/stylesheets/style.scss public/stylesheets/style.css && npm run terser"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
