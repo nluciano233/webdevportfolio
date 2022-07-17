@@ -10,6 +10,17 @@ To start the server on another port configure the script in package.json like th
 "devstart": "PORT=3001 nodemon ./bin/www"
 ```
 
+Additionally, you can make a `nodemon.json` file with the configuration of nodemon, and make it execute additional commands whenever the server starts, restarts, ecc. [You can find more info here](https://medium.com/netscape/nodemon-events-run-tasks-at-server-start-restart-crash-exit-93a34c54dfd8).
+
+If you do this, be sure to exclude the files that will be changed by the command that is executing on restart, otherwise nodemon will run into an infinite restart loop.
+
+You can do that by configuring the npm scripts like this:
+```
+"devstart": "nodemon --ignore public --exec ./bin/www",
+```
+
+
+
 ## Installing and configuring sass
 
 I started the project by installing nodemon and scss. I will skip the explanation for the nodemon part.
