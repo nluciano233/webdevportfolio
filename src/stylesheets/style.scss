@@ -84,12 +84,15 @@ button:focus {
   box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075) inset, 0 0 8px rgba(231, 231, 231, 0.8);
   outline: 0 none;
 }
+.displayNone {
+  display: none!important;
+}
 
 
 .navigation-menu {
   position: absolute;
   width: 100%;
-  z-index: 20;
+  z-index: 3;
 
   .mobile-navigation-menu {
     position: relative;
@@ -216,6 +219,28 @@ button:focus {
     .desktop-navigation-menu {
       display: block;
     }
+  }
+}
+
+.project-overview {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 4;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  .project-overview-img-container {
+    position: relative;
+    top: 20%;
+    max-width: 90vw;
+    overflow: hidden;
+  }
+
+  img {
+    width: 100%;
+
   }
 }
 

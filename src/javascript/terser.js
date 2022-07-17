@@ -3,7 +3,7 @@
 const fs = require("fs");
 const { minify } = require("terser");
 
-const files = ["plane-wave.js", "sphere.js", "form.js"]; // put inside here all the files that you want to uglify
+const files = ["plane-wave.js", "sphere.js", "form.js", "project-viewer.js"]; // put inside here all the files that you want to uglify
 
 // read all the content from the files and return them into an array
 function readFiles (files) {
