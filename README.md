@@ -84,6 +84,14 @@ In my case the problem was with my `from` header, it was not configured properly
 The `from` header should be configured to the same email that will send the emails, which in this project is stored inside `process.env.EMAIL`. 
 
 
+# Notes
+The `public` folder was excluded from git because the files in there can be made using the commands from `package.json`. Since the folder was included until a certain point, I had to execute 
+```
+$ git rm -r --cached public
+```
+to remove it from git.
+
+
 # The design
 
 ## Navigation menu
