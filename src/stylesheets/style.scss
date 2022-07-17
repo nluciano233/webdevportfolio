@@ -44,6 +44,7 @@ html, body {
   color: $text-white;
   font-family: 'Inter', sans-serif;
   position: relative;
+  scroll-behavior: smooth;
 }
 // font sizes for mobile
 html, body, button {
