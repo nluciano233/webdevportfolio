@@ -2,6 +2,7 @@
 
 This website was made to be used as my portfolio. Some of the design elements used in this project can be found on my github.
 
+[Live Website](https://luciannedea.herokuapp.com/)
 
 # Documentation
 ## nodemon 
